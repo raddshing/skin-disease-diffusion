@@ -23,7 +23,7 @@ All experiments were conducted using:
 
 
 ### 2. Train VAE
-- train_vae.py and import your Dataset.
+- `train_vae.py` and import your Dataset.
 
 #### 2.1 Evaluate Autoencoder
 - Use `eval_vae.py` to evaluate the trained VAE.
@@ -33,6 +33,14 @@ All experiments were conducted using:
 - Use `train_diffusion.py` to train the diffusion pipeline.
 - This process uses the VAE weights obtained from **Step 2**.
 
-```bash
-python train_diffusion.py --config configs/diffusion.yaml
+### 4. Sampling
+- Use `sampling.py` to generate image samples for various classes.
+- This script loads the trained diffusion model weights from **Step 3**
+
+### 5. Train Segmentation Model (Optional)
+
+- For lesion segmentation, refer to [MFSNet](https://github.com/Rohit-Kundu/MFSNet) and train a segmentation model on the HAM10000 dataset.
+- The trained MFSNet will later be used for **proxy severity interpolation** by separating lesion regions from the background.
+
+
 ---
