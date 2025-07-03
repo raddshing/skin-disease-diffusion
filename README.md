@@ -19,5 +19,14 @@ All experiments were conducted using:
 ├── nv/
 └── vasc/
 ```
-    Each folder should contain images corresponding to that specific class.
+- Each folder should contain images corresponding to that specific class.
+
+
+### 2. Train VAE
+- train_vae.py and import your Dataset.
+
+#### Evaluate Autoencoder
+- Use `eval_vae.py` to evaluate the trained VAE.
+- The evaluation computes reconstruction metrics including **MSE**, **MS-SSIM**, and **LPIPS**.
+
 ---
