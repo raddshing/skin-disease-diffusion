@@ -25,8 +25,14 @@ All experiments were conducted using:
 ### 2. Train VAE
 - train_vae.py and import your Dataset.
 
-#### Evaluate Autoencoder
+#### 2.1 Evaluate Autoencoder
 - Use `eval_vae.py` to evaluate the trained VAE.
 - The evaluation computes reconstruction metrics including **MSE**, **MS-SSIM**, and **LPIPS**.
 
+### 3. Train Diffusion
+- Use `train_diffusion.py` to train the diffusion pipeline.
+- This process uses the VAE weights obtained from **Step 2**.
+
+```bash
+python train_diffusion.py --config configs/diffusion.yaml
 ---
